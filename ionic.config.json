@@ -1,0 +1,7 @@
+{
+  "name": "SecureChatClient",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
