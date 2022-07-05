@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "SecureChatClient",
+	"appId": "xyz.laravelka.SucureChat",
+	"appName": "SecureChat",
 	"webDir": "dist",
 	"bundledWebRuntime": false
 }
