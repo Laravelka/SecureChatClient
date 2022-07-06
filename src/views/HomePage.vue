@@ -1,13 +1,13 @@
 <template>
 	<ion-page class="video-bg h-100 ion-justify-content-center ion-align-items-center">
-		<video playsinline autoplay muted loop poster="https://node.gameplace.space/files/bg-1.png">
+		<video playsinline autoplay="false" muted loop poster="https://node.gameplace.space/files/bg-1-mini.png">
 			<source src="https://node.gameplace.space/files/bg-1.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 		<div class="text-dark ion-padding ion-margin" style="z-index: 1">
 			<b>SAC</b> - The Secure Anonymous Chat
 		</div>
-		<ion-button color="success" rounded>Start</ion-button>
+		<ion-button color="success" fill="outline" class="rounded">Start</ion-button>
 	</ion-page>
 </template>
 <script lang="ts">
@@ -29,6 +29,10 @@
 	});
 </script>
 <style lang="css">
+	ion-button.rounded {
+		border-radius: 8px!important;
+	}
+
 	video {
 		object-fit: cover;
 		position: absolute;
