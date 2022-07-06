@@ -7,18 +7,18 @@
 				Your browser does not support the video tag.
 			</video>
 			<ion-slides class="fixed-bottom" pager="true" :options="slideOpts">
-				<ion-slide class="h-100">
-					<div class="text-dark ion-padding ion-margin" style="z-index: 1">
+				<ion-slide>
+					<div class="text-dark ion-padding ion-margin h-100" style="z-index: 1">
 						<b>SAC</b> - The Secure Anonymous Chat
 					</div>
 				</ion-slide>
-				<ion-slide class="h-100">
-					<div class="text-dark ion-padding ion-margin" style="z-index: 1">
+				<ion-slide>
+					<div class="text-dark ion-padding ion-margin h-100" style="z-index: 1">
 						Какой-то текст
 					</div>
 				</ion-slide>
-				<ion-slide class="h-100">
-					<div class="text-dark ion-padding ion-margin" style="z-index: 1">
+				<ion-slide>
+					<div class="text-dark ion-padding ion-margin h-100" style="z-index: 1">
 						Еще какой-то текст
 					</div>
 					<ion-button color="tertiary" fill="outline" class="rounded">Start</ion-button>
