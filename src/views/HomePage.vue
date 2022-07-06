@@ -30,7 +30,7 @@
 </script>
 <style lang="css">
 	ion-button.rounded {
-		border-radius: 8px!important;
+		--border-radius: 20px!important;
 	}
 
 	video {
