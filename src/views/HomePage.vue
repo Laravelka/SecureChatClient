@@ -1,18 +1,45 @@
 <template>
-	<ion-page class="video-bg h-100 ion-justify-content-center ion-align-items-center">
-		<video playsinline autoplay muted loop :poster="'https://node.gameplace.space/files/thumb-' + randomImage + '.png'">
-			<source :src="'https://node.gameplace.space/files/bg-' + randomImage + '.mp4'" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-		<div class="text-dark ion-padding ion-margin" style="z-index: 1">
-			<b>SAC</b> - The Secure Anonymous Chat
-		</div>
-		<ion-button color="tertiary" fill="outline" class="rounded">Start</ion-button>
+	<ion-page class="cc">
+		<ion-content class="video-bg h-100 ion-justify-content-center ion-align-items-center" scroll-y="false">
+			<video playsinline autoplay muted loop
+				:poster="'https://node.gameplace.space/files/thumb-' + randomImage + '.png'">
+				<source :src="'https://node.gameplace.space/files/bg-' + randomImage + '.mp4'" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<ion-slides class="fixed-bottom" pager="true" :options="slideOpts">
+				<ion-slide class="h-100">
+					<div class="text-dark ion-padding ion-margin" style="z-index: 1">
+						<b>SAC</b> - The Secure Anonymous Chat
+					</div>
+				</ion-slide>
+				<ion-slide class="h-100">
+					<div class="text-dark ion-padding ion-margin" style="z-index: 1">
+						Какой-то текст
+					</div>
+				</ion-slide>
+				<ion-slide class="h-100">
+					<div class="text-dark ion-padding ion-margin" style="z-index: 1">
+						Еще какой-то текст
+					</div>
+					<ion-button color="tertiary" fill="outline" class="rounded">Start</ion-button>
+				</ion-slide>
+			</ion-slides>
+		</ion-content>
+
 	</ion-page>
 </template>
 <script lang="ts">
 	import { defineComponent } from 'vue';
-	import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonButton, IonTitle, IonToolbar } from '@ionic/vue';
+	import { 
+		IonButtons,
+		IonContent,
+		IonHeader,
+		IonMenuButton,
+		IonPage,
+		IonButton,
+		IonTitle,
+		IonToolbar
+	} from '@ionic/vue';
 
 	export default defineComponent({
 		name: 'HomePage',
@@ -27,6 +54,11 @@
 			IonButton
 		},
 		setup() {
+			const slideOpts = {
+				initialSlide: 1,
+				speed: 400
+			}
+
 			const rand = (min: number, max: number): number => {
 				min = Math.ceil(min);
 				max = Math.floor(max);
@@ -35,12 +67,18 @@
 			}
 
 			return {
+				slideOpts,
 				randomImage: rand(1, 2)
 			}
 		}
 	});
 </script>
 <style lang="css">
+	.fixed-bottom {
+		position: relative;
+		top: 90vh;
+	}
+
 	ion-button.rounded {
 		--border-radius: 20px!important;
 	}
