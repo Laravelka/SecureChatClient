@@ -1,6 +1,6 @@
 <template>
 	<ion-page class="video-bg h-100 ion-justify-content-center ion-align-items-center">
-		<video playsinline loop :poster="'https://node.gameplace.space/files/thumb-' + randomImage + '.png'">
+		<video playsinline autoplay muted loop :poster="'https://node.gameplace.space/files/thumb-' + randomImage + '.png'">
 			<source :src="'https://node.gameplace.space/files/bg-' + randomImage + '.mp4'" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
