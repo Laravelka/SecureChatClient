@@ -1,13 +1,13 @@
 <template>
 	<ion-page class="video-bg h-100 ion-justify-content-center ion-align-items-center">
-		<video playsinline loop poster="https://node.gameplace.space/files/thumb-1.png">
-			<source src="https://node.gameplace.space/files/bg-1.mp4" type="video/mp4">
+		<video playsinline loop :poster="'https://node.gameplace.space/files/thumb-' + randomImage + '.png'">
+			<source :src="'https://node.gameplace.space/files/bg-' + randomImage + '.mp4'" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 		<div class="text-dark ion-padding ion-margin" style="z-index: 1">
 			<b>SAC</b> - The Secure Anonymous Chat
 		</div>
-		<ion-button color="success" fill="outline" class="rounded">Start</ion-button>
+		<ion-button color="tertiary" fill="outline" class="rounded">Start</ion-button>
 	</ion-page>
 </template>
 <script lang="ts">
@@ -25,6 +25,18 @@
 			//IonTitle,
 			//IonToolbar
 			IonButton
+		},
+		setup() {
+			const rand = (min: number, max: number): number => {
+				min = Math.ceil(min);
+				max = Math.floor(max);
+
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+			return {
+				randomImage: rand(1, 2)
+			}
 		}
 	});
 </script>
