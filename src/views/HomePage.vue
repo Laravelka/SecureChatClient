@@ -1,12 +1,9 @@
 <template>
 	<ion-page class="video-bg h-100 ion-justify-content-center ion-align-items-center">
-		<div class="stars">
-
-		</div>
 		<div class="text-dark ion-padding ion-margin">
 			<b>SAC</b> - The Secure Anonymous Chat
 		</div>
-		<a href="#" class="neon-button">Start</a>
+		<ion-button color="success">Start</ion-button>
 	</ion-page>
 </template>
 <script lang="ts">
@@ -23,13 +20,14 @@
 			IonPage,
 			//IonTitle,
 			//IonToolbar
-			// IonButton
+			IonButton
 		}
 	});
 </script>
 <style lang="css">
-	.video-bg {
 
+	.video-bg {
+		background-image: url(https://web.telegram.org/stream/%7B%22dcId%22%3A2%2C%22location%22%3A%7B%22_%22%3A%22inputDocumentFileLocation%22%2C%22id%22%3A%225330040721980268146%22%2C%22access_hash%22%3A%227434288464623762757%22%2C%22file_reference%22%3A%5B2%2C79%2C0%2C21%2C202%2C0%2C0%2C0%2C228%2C98%2C196%2C233%2C133%2C229%2C40%2C22%2C196%2C168%2C48%2C9%2C238%2C176%2C218%2C74%2C49%2C77%2C221%2C147%2C217%5D%7D%2C%22size%22%3A7619001%2C%22mimeType%22%3A%22video%2Fmp4%22%2C%22fileName%22%3A%22clouds_1.mp4%22%7D);
 	}
 
 	.neon-button {
